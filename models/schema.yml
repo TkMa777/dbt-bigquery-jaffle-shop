@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: customers
+    description: "Table des clients"  # Description de la table
+    columns:
+      - name: id
+        description: "La clé primaire de cette table"  # Description de la colonne id
+        tests:  # Tests à effectuer sur la colonne id
+          - unique  # Vérifie que toutes les valeurs dans la colonne id sont uniques
+          - not_null  # Vérifie que la colonne id ne contient aucune valeur nulle
+      - name: first_name
+        description: "Le prénom du client"  # Description de la colonne first_name
+        tests:  # Tests à effectuer sur la colonne first_name
+          - not_null  # Vérifie que la colonne first_name ne contient aucune valeur nulle
+      - name: last_name
+        description: "L'initiale du nom de famille du client"  # Description de la colonne last_name
+        tests:  # Tests à effectuer sur la colonne last_name
+          - not_null  # Vérifie que la colonne last_name ne contient aucune valeur nulle
